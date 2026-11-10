@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="능수버들 아래에서 한글이 바람처럼 흩날리는 인터랙티브 캔버스."
+    />
+    <title>hangul-willow</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="experience" aria-label="능수버들 아래 살랑이는 한글">
+      <canvas id="willow-canvas" aria-hidden="true"></canvas>
+
+      <section class="control-panel" aria-label="한글 버들 설정">
+        <div class="brand">
+          <p class="kicker">hangul-willow</p>
+          <h1>능수버들 아래 살랑이는 한글</h1>
+        </div>
+
+        <label class="phrase-field">
+          <span>문장</span>
+          <textarea id="phrase-input" rows="3">달빛 아래 한글이 바람을 따라 흐른다</textarea>
+        </label>
+
+        <div class="controls">
+          <label class="range-control">
+            <span>바람</span>
+            <input id="wind-input" type="range" min="0" max="100" value="46" />
+          </label>
+
+          <label class="range-control">
+            <span>밀도</span>
+            <input id="density-input" type="range" min="28" max="180" value="92" />
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="pause-button" type="button" aria-pressed="false">멈춤</button>
+          <button id="reset-button" type="button">다시 흩날리기</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
